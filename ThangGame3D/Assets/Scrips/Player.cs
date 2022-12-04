@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
-{
-
-    
+{ 
     private Rigidbody rb;
     public List<Transform> waypoints;
     private Transform lastPosition => waypoints[waypoints.Count - 1];
@@ -49,11 +47,12 @@ public class Player : MonoBehaviour
             anima.SetBool("attack", false);
             attack = false;
             Destroy(tower.gameObject);
+            return;
         }
         if (curHealth<=0) 
         {
             //anima.SetBool("Die", true);
-            anima.SetTrigger("Die 0");
+           anima.SetTrigger("Die 0");
             anima.SetBool("attack", false);
             attack= false;
         }

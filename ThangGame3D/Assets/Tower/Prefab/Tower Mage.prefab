@@ -510,10 +510,9 @@ GameObject:
   - component: {fileID: 9566220}
   - component: {fileID: 309885958}
   - component: {fileID: 309885955}
-  - component: {fileID: 309885959}
   m_Layer: 0
   m_Name: Tower Mage
-  m_TagString: Tower
+  m_TagString: Tower Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -586,27 +585,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.51799625
+  m_Radius: 0.8371598
   m_Height: 2.3677042
   m_Direction: 1
-  m_Center: {x: 0.017996073, y: 0.5044257, z: -0.017995995}
---- !u!114 &309885959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 405d508fd36952d42850c88098301c2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  curHealth: 0
-  damage: 10
-  healthBar: {fileID: 1462305822}
-  player: {fileID: 0}
+  m_Center: {x: 0.027667603, y: 0.5044257, z: 0.020690601}
 --- !u!1 &140236255
 GameObject:
   m_ObjectHideFlags: 0

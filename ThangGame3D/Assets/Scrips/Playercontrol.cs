@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Playercontrol : MonoBehaviour
+{
+    public GameObject player;
+    //public GameObject 
+    void Start()
+    {
+        
+    }
+    private void Update()
+    {
+        //if()
+        //{
+        //    CreateArmy();
+        //}    
+    }
+    public void CreateArmy()
+    {
+        Instantiate(player, new Vector3(0.65f, 0, 0.37f), Quaternion.identity);
+    }    
+}  
+

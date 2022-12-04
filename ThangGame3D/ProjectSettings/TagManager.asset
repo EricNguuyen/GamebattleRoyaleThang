@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Tower
   - sword
+  - enemy
+  - Tower Player
   layers:
   - Default
   - TransparentFX
