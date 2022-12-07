@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         {
             anima.SetBool("attack", false);
             attack = false;
-            Destroy(tower.gameObject);
+           // Destroy(tower.gameObject);
             return;
         }
         if (curHealth<=0) 
@@ -55,6 +55,7 @@ public class Player : MonoBehaviour
            anima.SetTrigger("Die 0");
             anima.SetBool("attack", false);
             attack= false;
+            Destroy(gameObject);
         }
 
         if (lastPosition == targetTransform)
@@ -79,7 +80,7 @@ public class Player : MonoBehaviour
         targetPosition = targetTransform.position;
        
     }
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag =="Tower" && tower.curHealth>0)
         {

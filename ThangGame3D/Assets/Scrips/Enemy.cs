@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     bool attack = false;
     public HealthBar healthBar;
     public Transform targetTransform;
-    public Tower tower;
+    public TowerPlayer tower;
     void Start()
     {
         countAttackTime = attackSpeech;
@@ -37,17 +37,18 @@ public class Enemy : MonoBehaviour
 
     {
         countAttackTime -= Time.deltaTime;
-        if (countAttackTime <= 0 && attack)
+        if (countAttackTime <= 0 && attack && tower.gameObject != null)
         {
             Attack();
 
         }
-        if (tower.curHealth <= 0 || tower.gameObject == null)
+        if (tower.curHealth <= 0)
         {
             anima.SetBool("attack", false);
             attack = false;
-            Destroy(tower.gameObject);
+            //Destroy(tower.gameObject);
             return;
+           
         }
         if (curHealth <= 0)
         {

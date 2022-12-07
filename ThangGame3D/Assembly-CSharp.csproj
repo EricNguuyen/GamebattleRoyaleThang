@@ -58,11 +58,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scrips\Playercontrol.cs" />
     <Compile Include="Assets\Scrips\Player.cs" />
+    <Compile Include="Assets\Scrips\TowerPlayer.cs" />
     <Compile Include="Assets\Scrips\Billboard.cs" />
     <Compile Include="Assets\Scrips\Tower.cs" />
-    <Compile Include="Assets\Scrips\HealthBar.cs" />
     <Compile Include="Assets\Scrips\Enemy.cs" />
-    <Compile Include="Assets\Scrips\TowerPlayer.cs" />
+    <Compile Include="Assets\Scrips\HealthBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
