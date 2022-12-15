@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scrips\Playercontrol.cs" />
     <Compile Include="Assets\Scrips\Player.cs" />
     <Compile Include="Assets\Scrips\TowerPlayer.cs" />
+    <Compile Include="Assets\Scrips\Dan.cs" />
     <Compile Include="Assets\Scrips\Billboard.cs" />
     <Compile Include="Assets\Scrips\Tower.cs" />
     <Compile Include="Assets\Scrips\Enemy.cs" />

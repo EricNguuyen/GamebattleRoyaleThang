@@ -14,15 +14,21 @@ public class Tower : MonoBehaviour
     public float range;
     public float countAttackTime;
     public HealthBar healthBar;
-    public Player[] player;
+    public Player player;
     bool Attack= false;
     public Animator anima;
     private Transform target;
     private Player targetPlayer;
+    public GameObject dan1;
+    public Dan dan;
+    public Transform shootingpoint;
+    
     void Start()
     {
         //player = FindObjectOfType<Player>();
         rb = this.GetComponent<Rigidbody>();
+        //dan1 = dan1.GetComponent<Rigidbody>();
+       // dan1 = dan1.GetComponent<Dan>();
         curHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         anima = gameObject.GetComponent<Animator>();
@@ -40,7 +46,8 @@ public class Tower : MonoBehaviour
             towerAttack();
 
         }
-        if (player[].curHealth <= 0)
+
+        if (player.curHealth <= 0)
         {
            // player.anima.SetBool("attack", false);
             Attack = false;
@@ -57,20 +64,28 @@ public class Tower : MonoBehaviour
   
     private void OnTriggerEnter(Collider other)
     {
-        if ((other.gameObject.tag == "Player") && player[].curHealth > 0)
+        if (other.gameObject.tag == "Player")
+        {
+            Player newPlayer= other.gameObject.GetComponent<Player>();
+            player = newPlayer;
+           // player = other.gameObject.GetComponent<Player>();
+        }
+        if ((other.gameObject.tag == "Player") && player.curHealth > 0)
         {
             Attack = true;
-            player[].anima.SetBool("Gethit", true);
+            player.anima.SetBool("Gethit", true);
         }
     }
   
     void towerAttack()
     {
         countAttackTime = attackSpeech;
-        if (player[].curHealth > 0)
+        if (player.curHealth > 0)
         {
-            player[].TakeDamage(damage);
+            player.TakeDamage(damage);
         }
+        GameObject newdan = Instantiate(dan1, shootingpoint.position, Quaternion.identity);
+        
     }
     //void UpdateTarget()
     //{

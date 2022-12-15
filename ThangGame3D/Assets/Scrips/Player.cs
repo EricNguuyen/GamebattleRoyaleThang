@@ -89,6 +89,15 @@ public class Player : MonoBehaviour
         } 
 
     }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Tower")
+        {
+            anima.SetBool("attack", false);
+            attack = false;
+        }
+
+    }
     public void TakeDamage(int damage)
     {
         curHealth-=damage;

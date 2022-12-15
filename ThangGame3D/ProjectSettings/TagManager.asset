@@ -8,6 +8,7 @@ TagManager:
   - sword
   - enemy
   - Tower Player
+  - dan
   layers:
   - Default
   - TransparentFX

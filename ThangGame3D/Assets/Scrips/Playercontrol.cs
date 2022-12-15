@@ -19,7 +19,9 @@ public class Playercontrol : MonoBehaviour
     }
     public void CreateArmy()
     {
-        Instantiate(player, new Vector3(0.65f, 0, 0.37f), Quaternion.identity);
+        Player gamePlayer = Instantiate(player, new Vector3(0.65f, 0, 0.37f), Quaternion.identity);
+        gamePlayer.gameObject.SetActive(true);
+        
     }    
 }  
 
