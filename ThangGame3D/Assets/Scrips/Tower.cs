@@ -19,7 +19,7 @@ public class Tower : MonoBehaviour
     public Animator anima;
     private Transform target;
     private Player targetPlayer;
-    public GameObject dan1;
+    public GameObject danfrefab;
     public Dan dan;
     public Transform shootingpoint;
     
@@ -84,8 +84,8 @@ public class Tower : MonoBehaviour
         {
             player.TakeDamage(damage);
         }
-        GameObject newdan = Instantiate(dan1, shootingpoint.position, Quaternion.identity);
-        
+        GameObject newdan = Instantiate(danfrefab, shootingpoint.position, transform.rotation) as GameObject;
+         newdan.gameObject.SetActive(true);
     }
     //void UpdateTarget()
     //{
