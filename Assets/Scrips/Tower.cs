@@ -20,7 +20,7 @@ public class Tower : MonoBehaviour
     private Transform target;
     private Player targetPlayer;
     public GameObject danprefab;
-    public Dan dan;
+    //public Dan dan;
     public Transform shootingpoint;
     
     void Start()
@@ -84,10 +84,14 @@ public class Tower : MonoBehaviour
         {
             player.TakeDamage(damage);
         }
-        //Dan newdan = dan.gameObject.GetComponent<Dan>();
-        GameObject newdan = Instantiate(danprefab, shootingpoint.position, transform.rotation);
-         //newdan.gameObject.SetActive(true);
-       // newdan = dan.gameObject.GetComponent<Dan>();
+        shoot();
+    }
+    void shoot()
+    {
+        GameObject newdan = (GameObject)Instantiate(danprefab, shootingpoint.position, transform.rotation);
+        Dan dan = newdan.GetComponent<Dan>();
+        newdan.gameObject.SetActive(true);
+        if (dan != null) { dan.seek(player.transform);}
     }
     //void UpdateTarget()
     //{
